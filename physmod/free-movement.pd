@@ -1,0 +1,7 @@
+#N canvas 194 369 198 142 10;
+#X obj 26 49 s \$1-pos;
+#X obj 26 102 s \$1-vel;
+#X obj 26 24 r \$1-free-pos;
+#X obj 26 78 r \$1-free-vel;
+#X connect 2 0 0 0;
+#X connect 3 0 1 0;

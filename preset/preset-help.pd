@@ -1,0 +1,8 @@
+#N canvas 346 22 450 300 10;
+#X obj 62 180 presetcursor \$0 A 1 0 -1;
+#X obj 47 89 preset \$0 er 3 0 0 9 430 30 5 1300 80 2 2550 100 0;
+#X obj 47 38 preset \$0 ah 1 -2 -3 9 844 30 6 1210 80 6 2700 100 -4
+;
+#X obj 47 63 preset \$0 eh 2 -3 0 9 630 30 6 1800 80 5 2550 100 0;
+#X obj 203 207 print A;
+#X connect 0 1 4 0;

@@ -1,0 +1,6 @@
+#N canvas 150 127 174 136 10;
+#X obj 28 52 rescale 0 1 \$1 \$2;
+#X obj 28 25 inlet;
+#X obj 28 79 outlet;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;

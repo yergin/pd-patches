@@ -1,0 +1,16 @@
+#N canvas 80 175 353 169 10;
+#X obj 33 68 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 84 68 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 33 6 3 5 200 1000;
+#X text 120 6 3 to 5 bangs 200 to 1000 ms appart;
+#X msg 33 -20 2 400;
+#X text 75 -19 2 bangs 400ms appart;
+#X obj 33 33 bangtrain;
+#X text 27 87 bang;
+#X text 79 87 done;
+#X connect 2 0 6 0;
+#X connect 4 0 6 0;
+#X connect 6 0 0 0;
+#X connect 6 1 1 0;

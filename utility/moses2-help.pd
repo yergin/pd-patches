@@ -1,0 +1,3 @@
+#N canvas 514 96 431 103 10;
+#X text 31 20 Works just like [moses] except that numbers equal to
+the argument will be sent out the left outlet.;

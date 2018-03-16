@@ -1,0 +1,19 @@
+#N canvas 299 84 386 255 10;
+#X obj 21 167 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 21 214 print countup;
+#X obj 108 214 print countup-done;
+#X msg 41 167 5;
+#X text 19 17 [countup] counts from 1 to N \, outputting the number
+series out of the first outlet followed by a bang out of the second
+outlet.;
+#X text 19 70 The only argument is the number N which is 1 by default
+;
+#X text 19 102 countup can receive:;
+#X text 19 135 - a bang to start a count;
+#X text 19 121 - an integer which will set N and start a count;
+#X obj 21 190 countup;
+#X connect 0 0 9 0;
+#X connect 3 0 9 0;
+#X connect 9 0 1 0;
+#X connect 9 1 2 0;

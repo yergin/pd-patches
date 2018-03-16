@@ -1,0 +1,52 @@
+#N canvas 419 315 563 446 10;
+#X declare -path ../3d;
+#X obj 85 229 / 1000;
+#X obj 28 94 scale3;
+#X obj 28 119 t a a;
+#X obj 28 281 t a a;
+#X obj 215 399 declare -path ../3d;
+#X obj 61 72 /;
+#X msg 61 48 1 \$1;
+#X obj 56 177 r \$1-vel-reset;
+#X obj 61 24 r \$1-mass;
+#X obj 28 -2 r \$1-force;
+#X obj 56 342 r \$1-pos-reset;
+#X text 176 10 inputs recieved:;
+#X text 176 28 \$1-time-step: simulation time step in ms;
+#X obj 85 204 r \$1-time-step;
+#X text 176 43 \$1-force: <Fx \, Fy \, Fz> force on mass in N;
+#X obj 55 309 s \$1-free-vel;
+#X obj 28 401 s \$1-free-pos;
+#X text 202 59 (must be sent every [\$1-time-step] ms);
+#X text 180 236 outputs sent:;
+#X obj 55 144 s \$1-acc;
+#X text 176 75 \$1-mass: mass in kg;
+#X text 180 254 \$1-acc: <Ax \, Ay \, Az> acceleration in m/s/s;
+#X text 180 269 \$1-free-vel: <Vx \, Vy \, Vz> unconstrained velocity
+in m/s;
+#X text 180 284 \$1-free-pos: <Px \, Py \, Pz> unconstrained position
+in m;
+#X text 177 97 \$1-vel-reset: <Vx \, Vy \, Vz> initial velocity condition
+in m/s;
+#X text 177 112 \$1-pos-reset: <Px \, Py \, Pz> initial position condition
+in m;
+#X text 182 335 note: use the [free-movement] patch to bypass any position
+or velocity constraints.;
+#X obj 28 252 integrate3;
+#X obj 28 370 integrate3;
+#X connect 0 0 27 2;
+#X connect 0 0 28 2;
+#X connect 1 0 2 0;
+#X connect 2 0 27 0;
+#X connect 2 1 19 0;
+#X connect 3 0 28 0;
+#X connect 3 1 15 0;
+#X connect 5 0 1 1;
+#X connect 6 0 5 0;
+#X connect 7 0 27 1;
+#X connect 8 0 6 0;
+#X connect 9 0 1 0;
+#X connect 10 0 28 1;
+#X connect 13 0 0 0;
+#X connect 27 0 3 0;
+#X connect 28 0 16 0;

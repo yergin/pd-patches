@@ -1,0 +1,32 @@
+#N canvas 23 22 396 343 10;
+#X msg 24 164 ./media/;
+#X msg 34 186 ./media/lo-fi/;
+#X obj 24 209 symbol;
+#X obj 24 256 t a b;
+#X obj 51 279 delay 1000;
+#X symbolatom 24 302 20 0 0 0 - - -;
+#X obj 24 232 safeload;
+#X obj 163 232 safeload 2000;
+#X msg 163 164 ./media/;
+#X msg 173 186 ./media/lo-fi/;
+#X obj 163 209 symbol;
+#X symbolatom 163 255 20 0 0 0 - - -;
+#X text 119 279 <- simulates loading time;
+#X text 21 73 The only argument is a timeout in ms after which the
+next path can be outputted. This defaults to 10s.;
+#X text 21 19 [safeload] delays a path (as a symbol) until it recieves
+a bang in it's right inlet to indicate that the previous load has finished.
+;
+#X text 21 114 [safeload] will not output the same path twice to prevent
+reloading the same data unnecessarily.;
+#X connect 0 0 2 0;
+#X connect 1 0 2 0;
+#X connect 2 0 6 0;
+#X connect 3 0 5 0;
+#X connect 3 1 4 0;
+#X connect 4 0 6 1;
+#X connect 6 0 3 0;
+#X connect 7 0 11 0;
+#X connect 8 0 10 0;
+#X connect 9 0 10 0;
+#X connect 10 0 7 0;

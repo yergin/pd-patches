@@ -1,0 +1,8 @@
+#N canvas 241 335 362 180 10;
+#X obj 26 61 list/sort;
+#X obj 26 93 print sorted;
+#X text 24 122 Dependencies: list/serialise \, list/parallelise \,
+list/listmax \, list/reverse;
+#X msg 26 29 12 87 44 64 2 75 94 29 4 44 28 89;
+#X connect 0 0 1 0;
+#X connect 3 0 0 0;

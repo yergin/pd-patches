@@ -1,0 +1,15 @@
+#N canvas 672 427 417 194 10;
+#X obj 40 47 tabwrite~ \$0-wavout;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array \$0-wavout 44100 float 0;
+#X coords 0 1 44099 -1 200 140 1;
+#X restore 182 -68 graph;
+#X obj 20 25 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 40 2 *~ 10;
+#X obj 40 -20 noise~;
+#X obj 40 25 limit~ -3 0 100;
+#X connect 2 0 0 0;
+#X connect 3 0 5 0;
+#X connect 4 0 3 0;
+#X connect 5 0 0 0;

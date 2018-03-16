@@ -1,0 +1,16 @@
+#N canvas 725 189 132 188 10;
+#X obj 19 27 -~ 0.5;
+#X obj 19 49 abs~;
+#X obj 19 71 *~ 4;
+#X obj 19 93 -~ 1;
+#X obj 19 117 outlet~;
+#X obj 19 -22 inlet~;
+#X obj 76 -22 inlet;
+#X obj 19 4 phasor~ \$1;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 5 0 7 0;
+#X connect 6 0 7 1;
+#X connect 7 0 0 0;

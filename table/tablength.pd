@@ -1,0 +1,10 @@
+#N canvas 708 305 155 126 10;
+#X obj 23 18 inlet;
+#X obj 23 70 expr size("$s1");
+#X obj 23 44 symbol \$1;
+#X obj 74 18 inlet;
+#X obj 23 93 outlet;
+#X connect 0 0 2 0;
+#X connect 1 0 4 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 1;

@@ -1,0 +1,15 @@
+#N canvas 863 220 205 268 10;
+#X obj 91 42 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 5423 1;
+#X obj 21 185 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 6546 1;
+#X obj 165 42 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 6269 1;
+#X obj 18 15 ../osc/tilt -45 45 -45 45;
+#X obj 18 209 ../control/scale 20 30;
+#X floatatom 18 237 5 0 0 0 - - -;
+#X connect 1 0 4 0;
+#X connect 3 0 1 0;
+#X connect 3 1 0 0;
+#X connect 3 2 2 0;
+#X connect 4 0 5 0;

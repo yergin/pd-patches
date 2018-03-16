@@ -1,0 +1,17 @@
+#N canvas 330 150 198 197 10;
+#X declare -path ../.;
+#X obj 82 38 inlet;
+#X obj 141 38 inlet;
+#X obj 24 160 declare -path ../.;
+#X obj 24 15 inlet~;
+#X obj 24 39 *~;
+#X obj 24 97 sqrt~;
+#X obj 24 123 outlet~;
+#X obj 24 69 attackrelease~ \$1 \$2;
+#X connect 0 0 7 1;
+#X connect 1 0 7 2;
+#X connect 3 0 4 0;
+#X connect 3 0 4 1;
+#X connect 4 0 7 0;
+#X connect 5 0 6 0;
+#X connect 7 0 5 0;

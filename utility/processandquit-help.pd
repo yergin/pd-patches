@@ -1,0 +1,15 @@
+#N canvas 345 126 450 300 10;
+#X declare -path ~/dropbox/path/utility;
+#X obj 62 234 declare -path ~/dropbox/path/utility;
+#X obj 93 137 *~;
+#X obj 93 106 processandquit;
+#X obj 48 165 dac~;
+#X obj 93 167 writesf~;
+#X msg 75 43 \; outputfile ../../../Desktop/processed.aif \; inputfile
+../../../Media/Guitar.wav;
+#X connect 1 0 3 1;
+#X connect 1 0 4 0;
+#X connect 2 0 1 0;
+#X connect 2 0 1 1;
+#X connect 2 0 3 0;
+#X connect 2 1 4 0;

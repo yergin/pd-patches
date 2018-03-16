@@ -1,0 +1,12 @@
+#N canvas 691 189 691 578 10;
+#X obj 398 34 bfaders;
+#X obj 97 91 ../midi/fader 1;
+#X obj 97 116 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 6540 1;
+#X obj 139 163 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 3886 1;
+#X obj 139 138 ../midi/fader 2;
+#X connect 1 0 2 0;
+#X connect 2 0 1 0;
+#X connect 3 0 4 0;
+#X connect 4 0 3 0;

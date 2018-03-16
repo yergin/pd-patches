@@ -1,0 +1,57 @@
+#N canvas 234 99 557 354 10;
+#X obj 106 115 hsl 64 15 0.1 20 1 0 empty empty Rate -2 -8 0 10 -262144
+-1 -1 5700 1;
+#X floatatom 176 115 5 0 0 0 - - -;
+#X obj 106 148 hsl 64 15 0.5 20 1 0 empty empty Regularity -2 -8 0
+10 -262144 -1 -1 2500 1;
+#X floatatom 176 147 5 0 0 0 - - -;
+#X obj 246 213 ../patch/audio/vcnoise~;
+#X obj 330 266 ../patch/audio/schmitt~ 0.5;
+#X obj 103 242 tgl 50 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 106 182 hsl 64 15 0 1 0 0 empty empty Reluctance -2 -8 0 10
+-262144 -1 -1 2400 1;
+#X floatatom 176 181 5 0 0 0 - - -;
+#X msg 330 288 0;
+#X msg 489 288 1;
+#X obj 106 216 hsl 64 15 0 1 0 0 empty empty Bias -2 -8 0 10 -262144
+-1 -1 3300 1;
+#X floatatom 176 215 5 0 0 0 - - -;
+#X obj 381 238 +~ 0;
+#X obj 233 113 inlet rate;
+#X obj 253 134 inlet regularity;
+#X obj 277 155 inlet reluctance;
+#X obj 302 175 inlet bias;
+#X obj 217 180 * 0.5;
+#X obj 402 193 * 2;
+#X obj 402 217 - 1;
+#X obj 103 304 outlet;
+#X obj 185 275 *~ 0.5;
+#X obj 185 299 +~ 0.5;
+#X obj 185 322 outlet~;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 1;
+#X connect 4 1 13 0;
+#X connect 4 1 22 0;
+#X connect 5 0 9 0;
+#X connect 5 1 10 0;
+#X connect 6 0 21 0;
+#X connect 7 0 8 0;
+#X connect 8 0 18 0;
+#X connect 9 0 6 0;
+#X connect 10 0 6 0;
+#X connect 11 0 12 0;
+#X connect 12 0 19 0;
+#X connect 13 0 5 0;
+#X connect 14 0 0 0;
+#X connect 15 0 2 0;
+#X connect 16 0 7 0;
+#X connect 17 0 11 0;
+#X connect 18 0 5 1;
+#X connect 19 0 20 0;
+#X connect 20 0 13 1;
+#X connect 22 0 23 0;
+#X connect 23 0 24 0;
+#X coords 0 -1 1 1 112 134 2 100 100;
